@@ -1,0 +1,25 @@
+input:
+ call 10
+ 2
+ 1
+ouput:
+  ecnn 21
+ explanation:
+ 
+   (c+2)=e
+   (1+1)=2
+  
+#Your code below
+a=input().strip()
+b=int(input())
+c=int(input())
+for i in a:
+    if i.isalpha():
+        if ord(i)+b>ord("z"):
+            print(chr(ord("a")+ord(i)+b-ord("z")-1),end="")
+        else:
+            print(chr(ord(i)+b),end="")
+    elif i.isdigit():
+        print(int(i)+c,end="")
+    else:
+        print(i,end="")
