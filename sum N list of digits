@@ -1,0 +1,13 @@
+#Your code below
+a=int(input())
+l=[]
+for i in range(a):
+    a=0
+    a="".join(list(map(str,input().split())))
+    l.append(a)
+s=0
+for i in l:
+    s+=int(i)
+s=list(str(s))
+for i in s:
+    print(i,end=" ")
