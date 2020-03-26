@@ -1,0 +1,82 @@
+#Your code below
+a,b=map(int,input().split())
+if a==1:
+    for i in range(b):
+        for j in range(b):
+            if j==b-1:
+                print(a,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==2:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or i==b-1 or i==b//2 or (j==b-1 and i<=b//2) or (j==0 and i>b//2):
+                print("2",end="")
+            else:
+                print("*",end="")
+        print()
+elif a==3:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or i==b-1 or i==b//2 or j==b-1:
+                print(3,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==4:
+    for i in range(b):
+        for j in range(b):
+            if (i<=b//2 and j==0) or i==b//2 or j==b-1:
+                print(4,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==5:
+    for i in range(b):
+        for  j in range(b):
+            if i==0 or i==b//2 or i==b-1 or (j==0 and i<=b//2) or (j==b-1 and i>b//2):
+                print(5,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==6:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or i==b-1 or j==0 or i==b//2 or (j==b-1 and i>b//2):
+                print(6,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==7:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or j==b-1:
+                print(7,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==8:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or i==b-1 or i==b//2 or j==0 or j==b-1 :
+                print(8,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==9 :
+    for i in range(a):
+        for j in range(b):
+            if i==0 or i==b-1or  i==b//2 or j==b-1 or (j==0 and i<=b//2):
+                print(9,end="")
+            else:
+                print("*",end="")
+        print()
+elif a==0:
+    for i in range(b):
+        for j in range(b):
+            if i==0 or i==b-1 or j==0 or j==b-1:
+                print(0,end="")
+            else:
+                print("*",end="")
+        print()
