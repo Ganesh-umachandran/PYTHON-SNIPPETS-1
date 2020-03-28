@@ -1,0 +1,25 @@
+input:
+6
+output:
+1 * * * * 2
+* 3 * * 4 *
+* * 5 6 * *
+* * 7 8 * *
+* 9 * * 10 *
+11 * * * * 12
+
+#Your code below
+a=int(input())
+b,c,d=0,a-1,1
+for i in range(a):
+    for j in range(a):
+        if j==b :
+            print(d,end=" ")
+            d=d+1
+        elif j==c:
+            print(d,end=" ")
+            d=d+1
+        else:
+            print("*",end=" ")
+    b,c=b+1,c-1
+    print()
