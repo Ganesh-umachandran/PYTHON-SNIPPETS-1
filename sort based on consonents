@@ -1,0 +1,26 @@
+input:
+ abcde abe ae abce
+ ouput:
+ ae abe abce abcde
+explanation:
+the strings are printed from low consonent count to high consonet count.
+if 2 strings have same consonent count it is the original order
+
+a,l,d,l1=int(input()),[str(i) for i in input().split()],"AEIOUaeiou",[]
+for i in l:
+    c=0
+    for j in i:
+        if j not in d:
+            c+=1
+    l1.append(c)
+d=[]
+for i in range(a):
+    d.append(l1[i])
+l1.sort()
+for i in l1:
+    print(l[d.index(i)],end=" ")
+    d[d.index(i)]=-1
+    
+            
+        
+
