@@ -1,0 +1,26 @@
+input:
+5
+output:
+1+2+3+4+5=12
+1*2*3*4=24
+1+2+3=6
+1*2=2
+1=1
+
+
+#Your code belowa
+a=int(input())
+e=a
+for i in range(a):
+    f=""
+    if i%2==0:b,d="+",0
+    else:b,d="*",1
+    c=1
+    while(c<=e):
+        if i%2==0:d+=c
+        else:d*=c
+        f+=str(c)+b
+        c+=1
+    print(f[:-1]+"="+str(d))
+    e-=1
+        
