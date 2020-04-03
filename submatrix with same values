@@ -1,0 +1,33 @@
+input:
+5 6
+1 3 4 5 6 5
+2 3 4 1 5 6
+2 2 3 4 5 6
+2 2 5 6 7 2
+1 1 3 5 7 7
+ 2
+output:
+yes
+explantion:
+submatrix with size of 2x2 should have same elements
+the submatrix 2,0 2,1 3,0 3,1 have same elements 
+so yes else no
+
+code:
+r,c=map(int,input().split())
+l=[list(map(int,input().split())) for i in range(r)]
+k=int(input())
+for i in range(r-k+1):
+    for j in range(c-k+1):
+        f=0
+        for ii in range(i,i+k):
+            for jj in range(j,j+k):
+                if l[ii][jj]!=l[i][j]:
+                    f=1
+                    break
+            if f==1:
+                break
+        if f==0:
+            print("yes")
+            quit()
+print("no")
