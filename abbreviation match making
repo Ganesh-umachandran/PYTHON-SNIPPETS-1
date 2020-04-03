@@ -1,0 +1,39 @@
+input:
+3
+world health organisation
+united nations organisation
+south asian association for reginol cooperation
+UNO
+
+output:
+united nations organisation
+
+explanation:
+UNO matches with united nations organisation
+
+a,l,l1=int(input()),[],[]
+for i in range(a):
+    l.append(str(input()).strip())
+b=input().strip()
+for i in l:
+    c=""
+    for j in range(len(i)):
+        if j==0 or (j-1>=0 and i[j-1]==" "):
+            c+=i[j]
+    l1.append(c)
+for i in range(len(l1)):
+    c,b1=l1[i],0
+    if len(c)==len(b):
+        for j in range(len(c)):
+            if c[j].lower()==b[j] or c[j].upper()==b[j]:
+                b1+=1
+    if b1==len(b):
+        print(l[i])
+        break
+        
+                
+                
+        
+    
+    
+    
