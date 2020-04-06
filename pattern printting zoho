@@ -1,0 +1,27 @@
+input:
+5
+ouput:
+1 6 10 13 15
+2 7 11 14
+3 8 12
+4 9 
+5
+code:
+a=int(input())
+l,b,c=[],a,1
+for i in range(a):
+    d=[]
+    for i in range(b):
+        d.append(c)
+        c+=1
+    b-=1
+    l.append(d)
+b=a
+for i in range(a):
+    for j in range(b):
+        print(l[j][i],end=" ")
+    b-=1
+    print()
+        
+        
+    
