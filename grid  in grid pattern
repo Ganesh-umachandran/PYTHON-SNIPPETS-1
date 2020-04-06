@@ -1,0 +1,30 @@
+inout:
+2 3
+4 4
+output:
+dedired pattern runn it
+
+a,b=map(int,input().split())
+c,d=map(int,input().split())
+e=a
+for i in range((a*c)+(c-1)):
+    if i%e-1!=0:
+        f=b
+        for j in range((b*d)+(d-1)):
+            if j==f:
+                print("|",end="")
+                f+=b+1
+            else:
+                print("*",end="")
+        print()
+    if i==e-1:
+        f=b
+        for j in range((b*d)+(d-1)):
+            if j==f:
+                print("+",end="")
+                f+=b+1
+            else:
+                print("-",end="")
+        e+=a
+        print()
+        
