@@ -1,0 +1,20 @@
+input:
+1000 1025
+output:
+1001 1010
+explanation
+only 1001 and 1010 have atleast 2 integers repeated in itself 
+
+code:
+a,b=map(int,input().split())
+c1=0
+for i in range(a,b+1):
+    c,i,d=0,str(i),""
+    for j in range(len(i)):
+        if i[j] in i[j+1:] and i[j] not in d:
+            c,d=c+1,d+i[j]
+        if c==2:
+            c1=1
+            print(i,end=" ")
+            break
+if c1==0:print("-1")
