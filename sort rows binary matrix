@@ -1,0 +1,28 @@
+input:
+3 3
+0 1 1
+0 0 1
+0 1 0
+output:
+0 0 1
+0 1 0
+0 1 1
+explantion:
+the decimal values of each row is 3,2 1
+after sorting the output is printed in binary format
+
+code:
+a,b=map(int,input().split())
+l=[]
+for i in range(a):
+    a=int("".join(list(map(str,input().split()))),2)
+    l.append(a)
+l.sort()
+for i in l:
+    i=bin(i)[2:]
+    i="0"*(b-len(i))+i
+    for j in i:
+        print(j,end=" ")
+    print()
+    
+    
