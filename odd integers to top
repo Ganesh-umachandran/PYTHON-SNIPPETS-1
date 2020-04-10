@@ -1,0 +1,32 @@
+input:
+3 4
+1 2 3 4
+5 6 7 8
+9 0 1 2
+output:
+5 2 3 4
+9 6 7 8
+1 0 1 2
+explanation:
+1st column: all odd elements came at top in respective orders followed by even elements in original order
+this is followed for all the coulumns
+
+code:
+a,b=map(int,input().split())
+l,l1=[],[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+for i in range(b):
+    c=[]
+    for j in range(a):
+        if l[j][i]%2!=0:
+            c.append(l[j][i])
+    for j in range(a):
+        if l[j][i]%2==0:
+            c.append(l[j][i])
+    l1.append(c)
+for i in range(a):
+    for j in range(b):
+        print(l1[j][i],end=" ")
+    print()
+        
