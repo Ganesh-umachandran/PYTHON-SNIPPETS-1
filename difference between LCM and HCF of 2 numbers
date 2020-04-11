@@ -1,0 +1,16 @@
+input:
+30
+45
+output:
+75
+
+code:
+a=int(input())
+b=int(input())
+def hcf(a,b):
+    if a==0:return b
+    else:return hcf(b%a,a)
+def lcm(a,b):
+    return (a*b)//hcf(a,b)
+print(abs(hcf(a,b)-lcm(a,b)))
+    
