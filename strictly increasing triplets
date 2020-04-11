@@ -1,0 +1,22 @@
+input:
+5
+5 7 3 8 9
+
+ouput:
+4
+
+explanation:
+strictly increasing numbers are
+5<7<8
+5<7<9
+7<8<9
+3<8<9
+
+code:
+from itertools import combinations
+a,c=int(input()),0
+b=combinations(list(map(int,input().split())),3)
+for i in b:
+    d,e,f=map(int,i)
+    if d<e and e<f :c+=1
+print(c)
