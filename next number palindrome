@@ -1,0 +1,12 @@
+input:
+909
+output:
+919
+
+code:
+a=int(input())
+for i in range(a+1,100001):
+    b=str(i)[::-1]
+    if int(b)==i:
+        print(i)
+        break
