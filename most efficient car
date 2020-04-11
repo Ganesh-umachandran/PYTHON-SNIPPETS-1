@@ -1,0 +1,19 @@
+input:
+3
+10 300
+20 550
+15 460
+
+output:
+3
+
+explanation:
+car on row 3 gives the maximum effcient among all teh others
+
+code
+a,d,e=int(input()),0,0
+for i in range(a):
+    b,c=map(int,input().split())
+    if c/b>=d:
+        d,e=c/b,i+1
+print(e)
