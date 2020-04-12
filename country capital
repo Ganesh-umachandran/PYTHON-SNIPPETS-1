@@ -1,0 +1,21 @@
+input:
+5
+aa bb
+cc dd
+ff jj
+ee gg
+hh yy
+cc
+output:
+dd
+
+code:
+a,l=int(input()),[]
+for i in range(a):
+    l+=map(str,input().split())
+e=input().strip()
+for i in range(len(l)):
+    if i+1<len(l) and l[i]==e:
+        print(l[i+1])
+        break
+else:print("NONE")
