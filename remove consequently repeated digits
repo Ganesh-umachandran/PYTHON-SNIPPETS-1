@@ -1,0 +1,13 @@
+input:
+bookkeeping
+output:
+bping
+
+code:[from geek for geeks]
+link:https://www.geeksforgeeks.org/python-consecutive-duplicates-all-elements-deletion-in-list/?ref=rp
+
+from itertools import groupby
+a=input().strip()
+b=[i for i,j in groupby(a) if sum(1 for c in j)<2]
+for i in b:
+    print(i,end="")
