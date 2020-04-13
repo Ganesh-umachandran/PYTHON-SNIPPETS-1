@@ -1,0 +1,23 @@
+input:
+40520
+
+output:
+58660
+
+explantion:
+for 4 the number is 43210
+for 0 the number is 0
+for 5 the number is 543210
+similary for all the numbers in the input number
+the sum of all modified number is output[43210 + 0 + 543210 + 210 + 0]
+
+code:
+
+a,s=input().strip(),0
+for i in a:
+    b=""
+    for j in range(int(i),-1,-1):
+        b+=str(j)
+    s+=int(b)
+print(s)
+        
