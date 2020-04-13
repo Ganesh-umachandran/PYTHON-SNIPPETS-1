@@ -1,0 +1,19 @@
+input:
+2
+1010 11
+
+output:
+13
+
+explanation:
+1010 to base 2 is 10 and 11 to base 2 is 3
+so the sum 10 + 3 = 13
+
+code:
+a,s=int(input()),0
+l=[str(i) for i in input().split()]
+for i in l:
+    i=i[::-1]
+    for j in range(len(i)):
+        s+=(int(i[j]))*(a**j)
+print(s)
