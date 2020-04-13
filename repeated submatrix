@@ -1,0 +1,12 @@
+n=int(input())
+l=[list(map(int,input().split())) for i in range(n)]
+for i in range(n-1):
+    for j in range(n-1):
+        for ii in range(n-1):
+            for jj in range(n-1):
+                if ii<i+2 and jj<j+2:
+                    continue
+                if l[ii][jj]==l[i][j] and l[ii+1][jj+1]==l[i+1][j+1] and l[i][j+1]==l[ii][jj+1] and l[i+1][j]==l[ii+1][jj]:
+                   print("YES")
+                   quit()
+print("NO")
