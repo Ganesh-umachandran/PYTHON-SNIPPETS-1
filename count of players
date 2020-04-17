@@ -1,0 +1,22 @@
+input:
+5
+a b b a c
+
+output:
+1
+
+expanation:
+if 2 consecutive players have same name they must be removed and final count is taken
+
+code:
+n=int(input())
+a=input().strip().split()
+l=[]
+for i in a:
+    if(l==[]):
+        l.append(i)
+    elif(l[-1]==i):
+        l.pop(-1)
+    else:
+        l.append(i)
+print(len(l))      
