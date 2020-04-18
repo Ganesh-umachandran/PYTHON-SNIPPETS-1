@@ -1,0 +1,15 @@
+3
+aba
+aadaa
+adfdaaa
+
+output:
+5
+
+code:
+a,l,l1=int(input()),[],[]
+for i in range(a):
+  b=input().strip()
+  if b==b[::-1]:
+    l.append(len(b))
+print(max(l))
