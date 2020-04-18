@@ -1,0 +1,9 @@
+#Your code below
+a,c=input().strip(),1
+for i in a:
+    if i=="T":c*=2
+    elif i=="G":c*=2
+    elif i=="L":c*=2
+    elif i=="F":c*=2
+    elif i=="D":c*=2
+print(c)
