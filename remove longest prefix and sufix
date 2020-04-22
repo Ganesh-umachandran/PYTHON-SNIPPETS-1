@@ -1,0 +1,30 @@
+input:
+abcdefgdcba
+
+output:
+efg
+
+explantion:
+abcd is prefix and dcba is suffix whixh are longer
+
+input:
+abba
+
+ouput:
+-1
+
+input:
+abcd
+
+ouput:
+abcd
+
+code
+a=input().strip()
+b,c=a[::-1],""
+for i in range(len(a)):
+    if a[i]==b[i]:c+=a[i]
+    else:break
+if len(a)-(len(c))==0:print("-1")
+elif c=="":print(a)
+else:print(a[len(c):-len(c)])
