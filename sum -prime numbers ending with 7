@@ -1,0 +1,17 @@
+input:
+156
+
+output:
+643
+
+code:
+a,s=int(input()),0
+for i in range(7,a):
+    c=0
+    for j in range(2,i//2):
+        if i%j==0:
+            c=1
+            break
+    if  c==0 and str(i)[-1]=="7":
+        s+=i
+print(s)
