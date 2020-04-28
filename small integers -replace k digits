@@ -1,0 +1,20 @@
+input:
+9001234 2
+
+output:
+234
+
+explanation:
+th first 2 digits(i>0) should be replaced as 0 and final integer
+should be printed as output
+
+code:
+a,b=map(str,input().split())
+c,c1="",0
+for i in a:
+    if int(i)>0 and c1<int(b):
+        c+="0"
+        c1+=1
+    else:
+        c+=i
+print(int(c))
