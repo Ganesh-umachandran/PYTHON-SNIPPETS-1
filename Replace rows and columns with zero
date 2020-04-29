@@ -1,0 +1,26 @@
+input:
+3 3
+1 2 3 
+4 5 7
+0 0 2
+
+output:
+0 0 3
+0 0 7
+0 0 0
+
+code:
+a,b=map(int,input().split())
+l,l1,l2=[],[],[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+for i in range(a):
+    for j in range(b):
+        if l[i][j]==0:
+           l1.append(i)
+           l2.append(j)
+for i in range(a):
+    for j in range(b):
+        if i in l1 or j in l2:print(0,end=" ")
+        else:print(l[i][j],end=" ")
+    print()
