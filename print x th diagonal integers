@@ -1,0 +1,17 @@
+a,l,b=int(input()),[],[]
+c,d=a-1,[]
+for i in range(a):
+    l.append(list(map(str,input().split())))
+for i in range(a):
+    for j in range(a):
+        if i==j:b.append(l[i][j])
+        if j==c:
+            d.append(l[i][j])
+            c-=1
+b=b+d
+d=int(input())
+print(b[d-1])
+
+            
+
+        
