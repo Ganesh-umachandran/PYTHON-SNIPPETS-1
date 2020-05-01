@@ -1,0 +1,27 @@
+input:
+5 3
+9:30
+9:30 9:34 9:29 9:33 9:30
+
+output:
+No
+
+explantion:if minimum 3 students have came to class before or on 9:30
+then there is no cancellation of class so no
+else yes
+yes means class is cancelled
+
+code:
+#Your code below
+a,b=map(int,input().split())
+c=input().strip()
+e=c.index(":")
+c1,d=0,int(c[:e]+c[e+1:])
+l=[str(i) for i in input().split()]
+for i in l:
+    e1=i.index(":")
+    d1=int(i[:e1]+i[e1+1:])
+    if d1<=d:c1+=1
+if c1>=b:print("No")
+else:print("Yes")
+    
