@@ -1,0 +1,16 @@
+input:
+x-2 y3 N1 W3
+
+ouput:
+x-5 y4
+
+code:
+a=list(map(str,input().split()))
+x,y=a[0],a[1]
+c1,c2,a=int(x[1:]),int(y[1:]),a[2:]
+for i in a:
+    if i[0]=="N":c2+=int(i[1])
+    if i[0]=="S":c2-=int(i[1])
+    if i[0]=="E":c1+=int(i[1])
+    if i[0]=="W":c1-=int(i[1])
+print("x"+str(c1),"y"+str(c2))
