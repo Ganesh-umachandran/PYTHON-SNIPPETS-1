@@ -1,0 +1,20 @@
+input:
+aab bfa fgb
+
+output:
+yes
+
+explanation:
+from aab a == a of bfa the b of bfa == b of fgb 
+if all the previous word 1st letter is equal to next word last letter 
+then yes else no
+
+code:
+a=list(map(str,input().split()))
+c=0
+for i in range(len(a)):
+    if i+1<len(a):
+        b,d=a[i],a[i+1]
+        if b[0].lower()==d[-1].lower():c+=1
+if c==len(a)-1:print("yes")
+else:print("no")
