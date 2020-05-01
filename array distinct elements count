@@ -1,0 +1,17 @@
+input:
+3 2
+100 200 300
+201 400
+
+output;
+5
+
+code:
+a,b=map(int,input().split())
+l=[int(i) for i in input().split()]
+l2,c=[int(i) for i in input().split()],0
+for i in l:
+    if i not in l2:c+=1
+for i in l2:
+    if i not in l:c+=1
+print(c)
