@@ -1,0 +1,25 @@
+Input:
+4 5 9 22 11 2 15
+
+Output:
+2 5 11 9 15 4 22
+
+explanation:
+first prime numbers are printed in ascending order
+then odd and  then even by ascending order
+
+code:
+l,l2=[int(i) for i in input().split()],[]
+l.sort()
+for i in l:
+    if i>1:
+        for j in range(2,i):
+            if i%j==0:
+                break
+        else:l2.append(i)
+for i in l:
+    if i%2!=0 and i not in l2:l2.append(i)
+for i in l:
+    if i%2==0 and i not in l2:l2.append(i)
+for i in l2:print(i,end=" ")
+
