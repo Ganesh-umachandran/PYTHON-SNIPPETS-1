@@ -1,0 +1,27 @@
+input 
+6
+4 3 2 8 5 9
+4
+
+output:
+8 2 9 5 4 3
+explantion:
+first 4 elements in list are reversed 
+the last 4 elements are reversed 
+
+code:
+a=int(input())
+l=[str(i) for i in input().split()]
+b,l1=int(input()),[]
+c=l[:b][::-1]
+for i in range(b):
+    l1.append(c[i])
+for i in range(b,a):
+    l1.append(l[i])
+c,l2=l1[-b:][::-1],[]
+for i in range(0,a-b):
+    l2.append(l1[i])
+for i in range(b):
+    l2.append(c[i])
+for i in l2:
+    print(i,end=" ")
