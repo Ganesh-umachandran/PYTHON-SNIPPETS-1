@@ -1,0 +1,18 @@
+input:
+7 3
+5 4 7 9 3 9 8
+
+ouput:
+7
+
+explantion:
+7 is the 3rd largest number in the list
+
+code:
+a,b=map(int,input().split())
+l,l2=[int(i) for i in input().split()],[]
+l.sort()
+for i in l:
+    if i not in l2:
+        l2.append(i)
+print(l2[-b])
