@@ -1,0 +1,11 @@
+7 test case pass 4 failed
+
+a=int(input())
+l,l2=[int(i) for i in input().split()],{}
+for i in l:
+    l2[i]=bin(i)[2:].count("0")
+for i in sorted(l2.values()):
+    a2=list(l2.values()).index(i)
+    print(list(l2.keys())[a2],end=" ")
+    l2[list(l2.keys())[a2]]="*"
+
