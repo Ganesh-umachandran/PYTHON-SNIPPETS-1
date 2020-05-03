@@ -1,0 +1,22 @@
+input:
+543210543210000012
+
+output:
+100000011222334455
+
+code:
+a,b,c,c1=input().strip(),"0123456789",[],0
+for i in b:
+    if i in a and int(i)>0 and c1==0:
+        d,c1=i,1
+        c.append(a.count(i)-1)
+    else:
+        c.append(a.count(i))
+print(d,end="")
+c1=0
+for i in b:
+    print(i*c[c1],end="")
+    c1+=1;
+    
+
+
