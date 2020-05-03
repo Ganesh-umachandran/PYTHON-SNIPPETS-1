@@ -1,0 +1,6 @@
+all cases working
+
+s=int(input())
+l=list(map(int,input().split()))
+l=sorted(l,key=lambda x: bin(x).count('0'))
+print(*l)
