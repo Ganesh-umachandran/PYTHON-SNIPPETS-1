@@ -1,0 +1,36 @@
+input:
+5
+2
+3
+
+output:
+2
+
+input:
+2
+3
+4
+
+output:
+-1
+
+code:
+x=int(input())
+y=int(input())
+z,c,x1,y1,c1=int(input()),0,max(x,y),min(x,y),0
+if z>x and z>y :print("-1")
+elif x==z or y==z:print("1")
+else:
+    for i in range(max(x,y)):
+        if x1==z:
+            break
+        elif x1<z:
+            print("-1")
+            c1=1
+            break
+        elif x1!=z:
+            c+=2
+            x1-=y1
+    if c1==0:print(c)
+   
+    
