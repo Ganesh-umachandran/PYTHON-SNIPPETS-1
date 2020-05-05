@@ -1,0 +1,19 @@
+input:
+2
+10 9
+4 22
+
+output:
+45
+
+code:
+a,l=int(input()),[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+b,d,c=0,a-1,0
+for i in range(a):
+    for j in range(a):
+        if j==b or j==d:c+=l[i][j]
+    b,d=b+1,d-1
+print(c)
+    
