@@ -1,0 +1,16 @@
+input:
+innovation
+
+output:
+vtonia
+
+explantion:
+no repeaed char and whloe string is reversed
+
+code:
+a,l=input().strip(),[]
+for i in a:
+    if i not in l:
+        l.append(i)
+l.sort()
+print("".join(l[::-1]))
