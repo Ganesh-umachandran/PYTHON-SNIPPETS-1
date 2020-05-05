@@ -1,0 +1,13 @@
+input:
+MON
+10
+
+output:
+WED
+
+code:
+a=input().strip()
+b,l=int(input()),["SUN","MON","TUE","WED","THU",FRI","SAT"]
+c=l.index(a)+(b-(7*(b//7)+1)
+if c>6:print(l[(c-6)-1])
+else:print(l[c])
