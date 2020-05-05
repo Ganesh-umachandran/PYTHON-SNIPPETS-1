@@ -1,0 +1,22 @@
+input:
+20 30 40
+50 10
+
+ouput:
+90
+
+code:
+a=list(map(int,input().split()))
+b,c=list(map(int,input().split())),0
+for i in a:
+    if i<0:
+        c=1
+        break
+for i in b:
+    if i<0:
+        c=1
+        break
+if c==1:print("INVALIDINPUT")
+elif sum(a)/len(a)==sum(b)/len(b):print(max(sum(a),sum(b)))
+elif sum(a)/len(a)>sum(b)/len(b):print(sum(a))
+else:print(sum(b))
