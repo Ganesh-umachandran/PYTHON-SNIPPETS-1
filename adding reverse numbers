@@ -1,0 +1,11 @@
+input:
+24
+1
+output:
+34
+
+code:
+a=input().strip()
+b=input().strip()
+a=str(int(a[::-1])+int(b[::-1]))
+print(int(a[::-1]))
