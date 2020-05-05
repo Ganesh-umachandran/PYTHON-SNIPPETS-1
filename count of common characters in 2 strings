@@ -1,0 +1,16 @@
+input:
+china
+india
+
+output:
+3
+
+code:
+a=input().strip()
+b,c=input().strip(),0
+d,l=a+b,[]
+for i in d:
+    if i not in l:
+        l.append(i)
+        c+=min(a.count(i),b.count(i))
+print(c)
