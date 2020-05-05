@@ -1,0 +1,14 @@
+input:
+everest
+
+output:
+2
+
+code:
+a,c=input().strip(),0
+for i in range(len(a)):
+    b=a[i]
+    for j in range(i+1,len(a)):
+        b+=a[j]
+        if b==b[::-1]:c+=1
+print(c)
