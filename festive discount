@@ -1,0 +1,27 @@
+input:
+5
+450
+500
+2000
+1600
+300
+
+output:
+2760.00
+
+explantion:
+If the label price of an item is more than Rs.400, then the discount is 20%.
+- If the label price of an item is more than Rs.500, then the discount is 25%.
+- If the label price of an item was more than or equal to Rs.1000, then the discount is 50%.
+- Finally if the total purchase amount after discount is more than Rs.2000 a further discount of Rs.100 is provided.
+
+code:
+a,s=int(input()),0
+for i in range(a):
+    b=int(input())
+    if b<=400:s+=b
+    elif b>400 and b<=500:s+=(b-(b*0.2))
+    elif b>500 and b<1000:s=(b-(b*0.25))
+    else:s+=(b-(b*0.5))
+if s>2000:print("%.2f"%(s-100))
+else:print("%.2f"%s)
