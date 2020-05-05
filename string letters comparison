@@ -1,0 +1,19 @@
+input:
+record 
+decoder
+
+output:
+YES
+
+code:
+a=input().strip()
+b=input().strip()
+c,l=b+a,[]
+for i in c:
+    if i not in l and i in a and i in b:l.append(i)
+for i in c:
+    if i not in l:
+        print("NO")
+        break
+else:print("YES")
+    
