@@ -1,0 +1,18 @@
+input:
+2
+-10 6
+4 -22
+output:
+22
+
+code:
+a,l=int(input()),[]
+for i in range(a):
+    l.append(list(map(int,input().split())))
+d1,d2,c1,c2=0,a-1,0,0
+for i in range(a):
+    for j in range(a):
+        if j==d1:c1+=l[i][j]
+        if j==d2:c2+=l[i][j]
+    d1,d2=d1+1,d2-1
+print(abs(abs(c1)-abs(c2)))
