@@ -1,0 +1,36 @@
+input:
+the brown quick frog quick the
+the 
+quick
+
+output:
+1
+
+code:
+l=[str(i) for i in input().split()]
+a=input().strip()
+b=input().strip()
+if a==b:
+    for i in range(len(l)):
+        if l[i]==a:
+            c=i
+            break
+    for i in range(c+1,len(l)):
+        if l[i]==b:
+            c1=i
+            break
+    print(c1-c)
+else:
+    l1,l2=[],[]
+    for i in range(len(l)):
+        if l[i]==a:l1.append(i)
+        if l[i]==b:l2.append(i)
+    c=abs(l1[0]-l2[0])
+    for i in range(len(l1)):
+        for j in range(len(l2)):
+            if abs(l1[i]-l2[j])<c:
+                c=abs(l1[i]-l2[j])
+    print(c)
+    
+    
+        
