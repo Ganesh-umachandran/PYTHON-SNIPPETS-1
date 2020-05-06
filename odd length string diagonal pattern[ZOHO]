@@ -1,0 +1,19 @@
+input:
+tiger
+
+output:
+t   r
+ i e
+  g
+ i e
+t   r
+
+code:
+a=input()
+b,c=0,len(a)-1
+for i in range(len(a)):
+    if b==c:print(" "*(len(a)-b)+a[b])
+    elif i<len(a)//2:print(" "*b+a[b]+" "*(c-b-1)+a[c])
+    elif i>len(a)//2:print(" "*c+a[c]+" "*(b-c-1)+a[b])
+    b,c=b+1,c-1   
+        
