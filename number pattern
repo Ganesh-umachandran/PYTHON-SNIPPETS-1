@@ -1,0 +1,24 @@
+input:
+5 6  
+
+ouput:
+55555                                                                                                                         
+25252                                                                                                                         
+16161                                                                                                                         
+15151                                                                                                                         
+13131
+99999
+
+explantion:
+the sum of 1st line is 25
+so 2nd line made up with that and sum of it 16
+this cycle follows till the last row
+
+code:
+a,b=map(int,input().split())
+s=a
+l=[int(i) for i in list(a*str(s))]
+for i in range(b):
+    s=sum(l[:a])
+    print(*l[:a],sep="")
+    l=[int(i) for i in list(a*str(s))]
