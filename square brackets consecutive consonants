@@ -1,0 +1,15 @@
+input:
+aeroplane
+
+output:
+ae[r]o[pl]a[n]e
+
+code:
+a,b=input().strip(),"aeiou"
+if a[0] not in b:print("["+a[0],end="")
+else:print(a[0],end="")
+for i in range(1,len(a)):
+    if a[i-1] in b and a[i] not in b:print("["+a[i],end="")
+    elif a[i-1] not in b and a[i] in b:print("]"+a[i],end="")
+    else:print(a[i],end="")
+if a[len(a)-1] not in b:print("]")
