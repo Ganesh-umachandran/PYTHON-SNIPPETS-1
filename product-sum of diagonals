@@ -1,0 +1,7 @@
+#Your code below
+a,b1,c1,b=int(input()),0,0,0
+for i in range(a):
+    l=list(map(int,input().split()))
+    b1,c1=b1+l[b],c1+l[len(l)-1-b]
+    b+=1
+print(b1*c1)
