@@ -1,0 +1,17 @@
+input:
+7
+4 2 3 1 7 9 10
+4
+
+ouput:
+YES
+
+code:
+a=int(input())
+l,l1=[int(i) for i in input().split()],[]
+b=int(input())
+c=l[:b]
+c.sort()
+l1=c+l[b:]
+l.sort()
+print("YES" if l1==l else "NO")
