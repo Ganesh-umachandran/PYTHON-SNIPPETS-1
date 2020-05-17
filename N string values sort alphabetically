@@ -1,0 +1,28 @@
+input:
+6
+abcd
+bcde
+aabb
+abcd
+abcd
+bcde
+
+output:
+3
+abcd 1 4 5
+aabb 3
+bcde 2 6
+
+code:
+a,l,l1=int(input()),[],[]
+for i in range(a):
+    b=input().strip()
+    l1.append(b)
+    if b not in l:l.append(b)
+print(len(l))
+l.sort()
+for i in l:
+    print(i,end=" ")
+    for j in range(a):
+        if l1[j]==i:print(j+1,end=" ")
+    print()
