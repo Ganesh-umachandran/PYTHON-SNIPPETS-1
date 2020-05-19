@@ -1,0 +1,33 @@
+input:
+4
+1 2 3 4 
+5 6 7 8 
+9 0 1 2 
+3 4 5 6
+2
+
+output:
+1 5 3 4 
+2 6 0 4
+9 7 1 2 
+3 8 5 6
+
+code:
+a,l,l1,l2=int(input()),[],[],[]
+for i in range(a):
+    l.append(list(map(str,input().split())))
+b=int(input())-1
+l1=l[b]
+for i in range(a):
+    for j in range(a):
+        if j==b:
+            l2.append(l[i][j])
+for i in range(a):
+    for j in range(a):
+        if i==b:
+            print(" ".join(l2),end="")
+            break
+        elif j==b:print(l1[i],end=" ")
+        else:print(l[i][j],end=" ")
+    print()
+
