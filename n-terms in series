@@ -1,0 +1,10 @@
+sample series:1 5 15 34 65 175 260..
+input:
+5
+output:
+1 5 15 34 65
+
+code:
+num=int(input())
+for i in range(1,num+1):
+    print(i*(i**2+1)//2,end=" ")
