@@ -1,0 +1,31 @@
+input:
+4
+rotor
+madam
+airplane
+dood
+max
+
+output:
+dood
+madam
+airplane
+rotor
+max
+
+code:
+a,l,l1,l2,j=int(input()),[],[],[],0
+for i in range(a):
+    b=input().strip()
+    l.append(b)
+    if b[0]==b[-1]:
+        l1.append(b)
+        l2.append(i)
+l1.sort()
+for i in range(a):
+    if i in l2:
+        print(l1[j])
+        j+=1
+    else:print(l[i])
+    
+    
