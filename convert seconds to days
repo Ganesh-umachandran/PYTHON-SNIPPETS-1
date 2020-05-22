@@ -1,0 +1,16 @@
+input:
+12345
+
+output:
+0D 03:25:45
+
+code:
+a=int(input())
+b=(a%60)
+b=str(b) if b>=10 else "0"+str(b)
+c=(a//60)%60
+c=str(c) if c>=10 else "0"+str(c)
+d=(a//(60*60))%24
+d=str(d) if d>=10 else "0"+str(d)
+e=(a//(60*60*24))%365
+print(str(e)+"D",d+":"+c+":"+b)
