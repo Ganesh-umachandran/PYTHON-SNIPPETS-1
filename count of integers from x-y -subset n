@@ -1,0 +1,11 @@
+input:
+90 110 1
+ouput:
+12
+
+code:
+x,y,n=map(int,input().split())
+c=0
+for i in range(x,y+1):
+    if str(n) in str(i):c+=1
+print(c)
