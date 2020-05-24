@@ -1,0 +1,13 @@
+m,n=map(int,input().split())
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+l,a=[],[]
+for i in l2:
+    for j in l1:
+        if i==j :
+            print(i,end=" ")
+l1.sort()
+l1=l1[::-1]
+for i in l1:
+    if i not in l2:
+        print(i,end=" ")
