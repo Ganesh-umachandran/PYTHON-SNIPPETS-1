@@ -1,0 +1,26 @@
+input:
+6
+65 2 78 790 10 31
+
+output:
+31 790 78 10 65 2
+
+code:
+num=int(input())
+l,a=sorted(list(map(int,input().split()))),[]
+for i in l:
+    a.append(bin(i).count("1"))
+for i in sorted(a)[::-1]:
+    if a.count(i)>1:
+        for j in range(num):
+            if bin(l[j]).count("1")==i:
+                print(l[j],end=" ")
+                l[j]=0
+                break
+    else:
+        for j in range(num-1,-1,-1):
+            if bin(l[j]).count("1")==i:
+                print(l[j],end=" ")
+                l[j]=0
+                break
+
