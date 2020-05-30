@@ -1,0 +1,24 @@
+input:
+91 43
+output:
+5
+explanation:
+for  91 =1011011
+for 43=101011
+the 5th bit from right differs 
+so 5 th is returned as ouptut
+
+code:
+x,y=map(int,input().split())
+x,y,flag=min(x,y),max(x,y),0
+x,y=(bin(x)[2:])[::-1],(bin(y)[2:])[::-1]
+for i in range(len(x)):
+    for j in range(len(y)):
+        if x[i]==y[i]:break
+        else:
+            print(i+1)
+            flag=1
+            break
+    if flag==1:break
+if flag==0:print(-1)
+        
