@@ -1,0 +1,10 @@
+input:
+apple 3
+output:
+app ppl ple
+
+code:
+s,k=map(str,input().split())
+for i in range(len(s)):
+    if i+int(k)>len(s):break
+    else:print(s[i:i+int(k)],end=" ")
