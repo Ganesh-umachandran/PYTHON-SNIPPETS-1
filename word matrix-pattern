@@ -1,0 +1,31 @@
+input:
+3 2
+his him
+late tool
+the antony
+
+output:
+|his*|him***|
+|late|tool**|
+|the*|antony|
+
+code:
+r,c=list(map(int,input().split()))
+m,l=[],[]
+for i in range(r):
+    m.append([str(i) for i in input().split()])
+for j in range(c):
+    maxlen=0
+    for i in range(r):
+        if len(m[i][j])>=maxlen:maxlen=len(m[i][j])
+    l.append(maxlen)
+for i in range(r):
+    print("|",end="")
+    count=0
+    for j in range(c):
+        if count<len(l):
+            print(m[i][j]+("*"*(l[count]-len(m[i][j])))+"|",end="")
+            count+=1
+    print()
+        
+        
