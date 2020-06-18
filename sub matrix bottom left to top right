@@ -1,0 +1,29 @@
+input:
+4 4
+1 2 3 4
+5 6 7 9
+8 5 4 1
+6 9 0 5
+2
+
+output:
+5 2 
+7 4
+6 5
+0 1
+
+code:
+r,c=list(map(int,input().split()))
+matrix=[]
+for row in range(r):
+    matrix.append(list(map(str,input().split())))
+k=int(input())
+for row in range(0,r,k):
+    for col in range(0,c,k):
+        if row+k<=r and col+k<=c:
+            sub_row,sub_col=row+k-1,col
+            for count in range(k):
+                print(matrix[sub_row][sub_col],end=" ")
+                sub_row,sub_col=sub_row-1,sub_col+1
+            print()
+                
