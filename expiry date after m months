@@ -1,0 +1,9 @@
+date=input().strip()
+month,year=map(int,date.split("-"))
+m=int(input())
+year+=m//12
+if month+m%12>12:
+    year+=(month+m%12)//12
+month=month+m%12 if month+m%12<=12 else (month+m%12)%12
+month="0"+str(month) if month<10 else str(month)
+print(month+"-"+str(year))
