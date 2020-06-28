@@ -1,0 +1,24 @@
+input:
+133
+
+output:
+13 3
+
+code:
+def isprime(a):
+    if a>1:
+        for i in range(2,int(a**0.5)+1):
+            if a%i==0:
+                return False
+        return True
+    else:return False
+n,flag=input().strip(),0
+for i in range(len(n)-1):
+    n1,n2=int(n[:i+1]),int(n[i+1:])
+    if isprime(n1) and isprime(n2):
+        flag=1
+        print(n1,n2)
+        break
+if flag==0:
+    print(-1)
+    
