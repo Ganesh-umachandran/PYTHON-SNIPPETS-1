@@ -1,0 +1,27 @@
+input:
+4 4
+u m o a 
+h n a o
+y h r w
+b n h e
+
+ouput:
+4
+
+code:
+def diagonal_check(matrix):
+    count_same=0
+    for line in range(1,row+col):
+        start_col=max(0,line-row)
+        count=min(line,col-start_col,row)
+        diag=[]
+        for j in range(0,count):
+            diag.append(matrix[min(row,line)-j-1][start_col+j])
+        if all(diag[0]==i for i in diag):
+            count_same+=1
+    print(count_same)
+row,col=list(map(int,input().split()))
+matrix=[]
+for i in range(row):
+    matrix.append(list(map(str,input().split()))[::-1])
+diagonal_check(matrix)
