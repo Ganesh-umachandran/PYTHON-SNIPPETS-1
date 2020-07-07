@@ -1,0 +1,23 @@
+input:
+5 3
+2 30 10 12 20
+1 5
+2 3
+3 5
+
+output:
+2
+10
+2
+
+code:
+def hcf_range(first,last):
+    for i in range(max(num_range[first-1:last]),0,-1):
+        if all(num_range[j]%i==0 for j in range(first-1,last)):
+            print(i)
+            break
+n,t=list(map(int,input().split()))
+num_range=list(map(int,input().split()))
+for i in range(t):
+    first,last=list(map(int,input().split()))
+    hcf_range(first,last)
