@@ -1,0 +1,36 @@
+input:
+6 2
+peter 70
+dave 86
+diviya 70
+deepika 68
+kevin 22
+sherlock 68
+
+output:
+divya 
+peter
+
+code:
+n,x=list(map(int,input().split()))
+rank_list,name_list,marks,real_rank=[],[],[],[1]
+for i in range(n):
+    name,rank=list(map(str,input().split()))
+    rank=int(rank)
+    if rank not in rank_list:
+        rank_list.append(rank)
+    name_list.append(name+" "+str(rank))
+    marks.append(rank)
+rank_list=sorted(rank_list)[::-1]
+for i in range(1,len(rank_list)):
+    real_rank.append(marks.count(rank_list[i-1])+real_rank[-1])
+if x not in real_rank:
+    print(-1)
+else:
+    x_names=[]
+    for i in name_list:
+        name,rank=list(map(str,i.split()))
+        if int(rank)==rank_list[real_rank.index(x)]:
+            x_names.append(name)
+    for i in sorted(x_names):
+        print(i)
