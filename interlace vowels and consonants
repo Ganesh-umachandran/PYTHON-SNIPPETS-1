@@ -1,0 +1,16 @@
+#Your code below
+s,check=input().strip(),"aeiouAEIOU"
+vowels,consonants=[],[]
+for i in s:
+    if i in check:
+        vowels.append(i)
+    else:
+        consonants.append(i)
+consonants=consonants[::-1]
+for i in range(min(len(vowels),len(consonants))):
+    print(vowels[i],consonants[i],sep="",end="")
+if len(vowels)<len(consonants):
+    print("".join(consonants[len(vowels):]))
+else:
+    print("".join(vowels[len(consonants):]))
+    
