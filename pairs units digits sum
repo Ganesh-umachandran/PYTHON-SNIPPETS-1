@@ -1,0 +1,19 @@
+input:
+1023456789
+
+ouput:
+4
+
+code:
+n,pairs,count=input().strip(),[],0
+for i in range(len(n)-1):
+    for j in range(len(n)-1):
+        if i!=j:
+            p=[int(n[i]),int(n[j])]
+            if  sum(p)==int(n[-1]) and p not in pairs and p[::-1] not in pairs:
+                count+=1
+                pairs.append(p)
+if count==0:
+    print(-1)
+else:
+    print(count)
