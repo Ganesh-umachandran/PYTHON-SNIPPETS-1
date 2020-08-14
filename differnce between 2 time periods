@@ -1,0 +1,23 @@
+input:
+03:45:13
+05:56:01
+
+output:
+02:10:48                                                                                                                             
+         
+code:
+st_hour,st_min,st_sec=map(int,input().split(":"))
+end_hour,end_min,end_sec=map(int,input().split(":"))
+if st_sec > end_sec :
+    end_sec+=60
+    end_min-=1
+if st_min > end_min:
+    end_min+=60
+    end_hour-=1
+second=str(end_sec-st_sec)
+minute=str(end_min-st_min)
+hour=str(end_hour-st_hour)
+second=second if len(second)>1 else "0"+second
+minute=minute if len(minute)>1 else "0"+minute
+hour=hour if len(hour)>1 else "0"+hour
+print(hour+":"+minute+":"+second)
