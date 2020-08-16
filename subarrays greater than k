@@ -1,0 +1,18 @@
+input:
+4 10                                                                                                                                 
+12 25 10 5                                                                                                                           
+                                                                                                                                
+ouput:
+7
+
+code:
+n,k=map(int,input().split())
+array,count,prev=list(map(int,input().split())),0,[]
+for i in range(1,n+1):
+    for j in range(n):
+        curr=array[j:j+i]
+        if max(curr)>k and len(curr)>=len(prev) :
+            count+=1
+        prev=curr
+print(count)
+    
