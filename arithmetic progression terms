@@ -1,0 +1,12 @@
+#Your code below
+a,d=map(int,input().split())
+n=int(input())
+t=int(input())
+x,y=map(int,input().split())
+print(a+(n-1)*d)
+n1=int((t-a)/d)+1
+if (a+(n1-1)*d)==t:
+    print(n1)
+else:
+    print("Not Found")
+print(abs((a+(x-1)*d)-(a+(y-1)*d)))
