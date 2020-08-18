@@ -1,0 +1,35 @@
+input:
+5 1
+
+ouput:
++-----+
+|*****|
+|*****|
+|*****|
+|*****|
+|*****|
++-----+
+
+code:
+import math
+n,x=map(int,input().split())
+mat,row,col=n*int(math.sqrt(x)),"+","|"
+for i in range(1,mat+1):
+    if (i%n==0 and i>1 and i<mat) or(n==1 and i<mat):
+        row+="-+"
+    else:
+        row+="-"
+for i in range(1,mat+1):
+    if (i%n==0 and i>1 and i<mat) or (n==1 and i<mat):
+        col+="*|"
+    else:
+        col+="*"
+row,col=row+"+",col+"|"
+print(row)
+for i in range(1,mat+1):
+    if (i%n==0 and i>1 and i<mat) or(n==1 and i<mat) :
+        print(col)
+        print(row)
+    else:
+        print(col)
+print(row)
