@@ -1,0 +1,21 @@
+s1=input().strip()[::-1]
+s2=input().strip()[::-1]
+vowels="AEIOUaeiou"
+def start(i,key):
+    if i<len(s1):
+        if (s1[i] in vowels and s2[i] in vowels)or(s1[i] not in vowels and s2[i] not in vowels):
+            if key==1:
+                print(s1[i],s2[i],sep="",end="")
+                i,key=i+1,0
+            elif key==0:
+                print(s2[i],s1[i],sep="",end="")
+                i,key=i+1,1
+        else:
+            if key==1:
+                print(s1[i],end="")
+                i+=1
+            elif key==0:
+                print(s2[i],end="")
+                i+=1
+        start(i,key)
+start(0,1)
