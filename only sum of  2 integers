@@ -1,0 +1,19 @@
+input:
+7 3 14
+ouput:
+14
+code:
+x,y,z=map(int,input().split())
+m,flag=z//min(x,y),0
+if x==z or y==z or z%x==0 or z%y==0:
+    print("YES")
+    flag=1
+else:
+    for i in range(m+1):
+        for j in range(m+1):
+            if (x*i)+(y*j)==z and flag==0:
+                print("YES")
+                flag=1
+                break
+    if flag==0:
+        print("NO")
