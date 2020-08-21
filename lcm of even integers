@@ -1,0 +1,18 @@
+#Your code below
+n=int(input())
+arr=[int(i) for i in input().split() if int(i)%2==0]
+def checklcm(num1,num2):
+    if num1>num2:
+        num,den=num1,num2
+    else:
+        num,den=num2,num1
+    rem=num%den
+    while(rem!=0):
+        num=den
+        den=rem
+        rem=num%den
+    return int(int(num1*num2)/int(den))
+lcm=checklcm(arr[0],arr[1])
+for i in range(2,len(arr)):
+    lcm=checklcm(lcm,arr[i])
+print(lcm)
