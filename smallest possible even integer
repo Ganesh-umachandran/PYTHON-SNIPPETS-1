@@ -1,0 +1,14 @@
+x,y=map(str,input().split())
+num,s,e=sorted([int(i) for i in x]+[int(i) for i in y]),-1,0
+for i in range(len(num)):
+    if num[i]!=0 and s==-1:
+        s=i
+num="".join([str(i) for i in num])
+num=num[s]+num[:s]+num[s+1:]
+for i in range(len(num)):
+    if int(num[i])%2==0:
+        e=i
+if int(num[e])%2!=0:
+    print(-1)
+else:
+    print(num[:e]+num[e+1:]+num[e])
