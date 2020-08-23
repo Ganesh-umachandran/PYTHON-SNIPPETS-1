@@ -1,0 +1,15 @@
+input:
+4 29
+5 10 4 12
+
+ouput:
+3
+
+code:
+n,t=map(int,input().split())
+prices,count,s=sorted(list(map(int,input().split()))),0,0
+for i in range(n):
+    if s+prices[i]<=t:
+        s+=prices[i]
+        count+=1
+print(count)
