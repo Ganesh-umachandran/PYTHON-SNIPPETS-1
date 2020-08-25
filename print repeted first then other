@@ -1,0 +1,10 @@
+#Your code below
+m,n=map(int,input().split())
+l1=sorted(list(map(int,input().split())))
+l2=list(map(int,input().split()))
+for i in l2:
+    for j in range(l1.count(i)):
+            print(i,end=" ")            
+for j in l1:
+    if j not in l2:
+        print(j,end=" ")
