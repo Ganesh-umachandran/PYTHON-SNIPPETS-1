@@ -1,0 +1,14 @@
+#Your code below
+n,size,area=int(input()),[],[]
+for i in range(n):
+    l,b=map(int,input().split())
+    size.append([l,b])
+    area.append(l*b)
+for i in sorted(zip(area,size)):
+    a=i[1]
+    a.append(i[0])
+    for j in a:
+        print(j,end=" ")
+    print()
+
+    
