@@ -1,0 +1,11 @@
+s,v,count=list(input().strip()),"aeiouAEIOU",0
+if all(i.isalpha() for i in s)==0:
+    print("Invalid")
+else:
+    for i in range(len(s)):
+        if s[i] in v:
+            count+=1
+            s[i]="1"
+    print("".join(s),count)
+    
+    
