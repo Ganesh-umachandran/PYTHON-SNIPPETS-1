@@ -1,0 +1,13 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(r):
+    if i<r and i<c:
+        a=" ".join([str(l[i][j]) for j in range(i,c)])
+        if len(a)>0:
+            print(a)
+        b=" ".join([str(l[j][i]) for j in range(i+1,r)])
+        if len(b)>0:
+            print(b)
