@@ -1,0 +1,15 @@
+#Your code below
+n=int(input())
+numbers=list(map(int,input().split()))
+p,q=map(int,input().split())
+for i in numbers:
+    if i==p//q:
+        print("/",end=" ")
+    elif i==p*q:
+        print("*",end=" ")
+    elif i==p+q:
+        print("+",end=" ")
+    elif i==abs(p-q):
+        print("-",end=" ")
+    else:
+        print("#",end=" ")
