@@ -1,0 +1,23 @@
+input:
+sat
+Satsat
+2
+
+ouput:
+NO
+
+code:
+check,s1,flag=[],input().strip(),0
+s2=input().strip()
+x=int(input())
+for i in s1:
+    if i not in check:
+        if s1.count(i)*x>s2.count(i):
+            print("NO")
+            flag=1
+            break
+        else:
+            check.append(i)
+if flag==0:
+    print("YES")
+        
