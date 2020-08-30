@@ -1,0 +1,10 @@
+#Your code below
+s=list(input().strip())
+r,n=map(int,input().split())
+for i in range(r):
+    if s[i]=="0":
+        s[i]="01"
+    else:
+        s[i]="10"
+s="".join(s)
+print(s[n-1])
