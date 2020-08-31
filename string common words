@@ -1,0 +1,16 @@
+input:
+the man is good
+the woman is pretty
+3
+output:
+the
+code:
+s1=list(map(str,input().split()))
+s2=list(map(str,input().split()))
+l,n=[],int(input())
+for i in s1:
+    if len(i)==n and i in s2 and i not in l:
+        print(i,end=" ")
+        l.append(i)
+if len(l)==0:
+    print(-1)
