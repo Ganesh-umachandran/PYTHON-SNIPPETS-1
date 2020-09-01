@@ -1,0 +1,14 @@
+
+s=input().strip()
+i,a,m=0,0,0
+while(i<len(s)):
+    if i+1<len(s) and s[i]=="s" and s[i+1]=="r":
+        a+=2
+        i+=2
+    else:
+        a=0
+        i+=1
+    if a>m:
+        m=a
+print(m)
+        
