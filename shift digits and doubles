@@ -1,0 +1,9 @@
+n=list(input().strip())
+c=n[1]
+for i in range(1,len(n),2):
+    n[i],c=c,n[i]
+n[1]=c
+print(2*int("".join(n)))
+    
+    
+    
