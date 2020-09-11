@@ -1,0 +1,16 @@
+n,flag=int(input()),0
+l,l1=list(map(int,input().split())),[]
+def su(a):
+    s=sum([int(j) for j in str(a)])
+    if s<=9:
+        l1.append(s)
+    else:
+        su(s)
+for i in l:
+    su(i)
+for i in range(n):
+    if l1[i]%2!=0:
+        print(l[i],end=" ")
+        flag=1
+if flag==0:
+    print(-1)
