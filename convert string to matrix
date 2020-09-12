@@ -1,0 +1,14 @@
+s="*".join(list(map(str,input().split())))
+n,l,c,=int(input()),[],0
+if len(s)%n!=0:
+    a=(len(s)//n)+1
+else:
+    a=len(s)//n
+for i in range(a):
+    a=s[c:c+n]
+    c+=n
+    if len(a)<n:
+        a+=((n-len(a))*"#")
+    l.append(" ".join(list(a))[::-1])
+for i in l[::-1]:
+    print(i)
