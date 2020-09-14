@@ -1,0 +1,11 @@
+l=[["q","w","e","r","t","y","u","i","o","p",],["a","s","d","f","g","h","j","k","l"],["z","x","c","v","b","n","m"]]
+l1,flag=[str(i).strip() for i in input().split(",")],0
+for k in l1:
+    for i in l:
+        if all(j in i for j in k.lower()):
+            print(k,end=" ")
+            flag=1
+            break
+if flag==0:
+    print(-1)
+            
