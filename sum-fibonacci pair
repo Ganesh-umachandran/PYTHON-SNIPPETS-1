@@ -1,0 +1,17 @@
+n=int(input())
+a,b,c,l,flag=0,1,0,[0,1],0
+while(c<n):
+    c=a+b
+    a=b
+    b=c
+    l.append(c)
+for i in range(len(l)):
+    for j in range(i+1,len(l)):
+        if l[i]+l[j]==n:
+            print(l[i],l[j])
+            flag=1
+            break
+    if flag==1:
+        break
+if flag==0:
+    print(-1)
