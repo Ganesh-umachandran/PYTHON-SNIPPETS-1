@@ -1,0 +1,14 @@
+s=[str(i).strip() for i in input().split()]
+l,c=[],0
+for i in range(len(s)):
+    a,c1=s[i][-((len(s[i])+1)//2):].lower(),1
+    for j in range(i+1,len(s)):
+        b=s[j][-((len(s[j])+1)//2):].lower()
+        if a==b and a not in l:
+            c1+=1
+    if a not in l:
+        l.append(a)
+    if c1>1:
+        c+=c1
+print(c)
+        
