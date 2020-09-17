@@ -1,0 +1,24 @@
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    a=list(map(int,input().split()))
+    if a.count(1)>a.count(0):
+        l.append(a.count(1))
+x,s=int(input()),sum(l)
+if len(l)==0:
+    print(-1)
+else:
+    print((x//s)+1 if x%s!=0 else x//s)
+    for i in range(x//s):
+        print(len(l),end=" ")
+    if x%s!=0:
+        c1,c2=x%s,0
+        for i in sorted(l)[::-1]:
+            if c1>0 and c1>i :
+                c1-=i
+                c2+=1
+            else:
+                print(c2+1 if c1>0 else c2)
+                break
+
+            
