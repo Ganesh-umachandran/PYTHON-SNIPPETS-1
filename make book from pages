@@ -1,0 +1,19 @@
+#Your code below
+n,c=int(input()),0
+r1=[int(i) for i in input().split()]
+r2=[int(i) for i in input().split()]
+for i in range(n):
+    if (r1[i]%2!=0 and r2[i]%2!=0) or (r1[i]%2==0 and r2[i]%2==0) :
+        if c==0:
+            print(r1[i],r2[i],end=" ")
+            c=1
+        else:
+            print(r2[i],r1[i],end=" ")
+            c=0
+    else:
+        if c==0:
+            print(r1[i],end=" ")
+            c=0
+        else:
+            print(r2[i],end=" ")
+            c=1
