@@ -1,0 +1,11 @@
+s,a="",0
+for i in bin(int(input()))[2:]:
+    if i=="0":
+        a+=1
+    elif i=="1":
+        s+=str(a)*a
+        s+="1"
+        a=0
+s+=str(a)*a
+print(bin(int(s))[2:])
+    
