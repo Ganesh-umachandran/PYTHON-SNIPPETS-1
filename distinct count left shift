@@ -1,0 +1,7 @@
+s,l,c=input().strip(),[],0
+for i in range(len(s)):
+    a=s[i:]+s[0:i]
+    if a not in l:
+        c+=1
+        l.append(a)
+print(c)
