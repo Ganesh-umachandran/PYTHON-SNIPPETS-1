@@ -1,0 +1,8 @@
+n,count,last=int(input()),0,0
+for i in list(map(str,input().split())):
+    for k in sorted([int(j) for j in i]):
+        if k>=last:
+            count+=k
+            last=k
+            break
+print(count)
