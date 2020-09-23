@@ -1,0 +1,9 @@
+s1=input().strip()[::-1]
+s2,l=input().strip(),[]
+for i in s2:
+    for  j in range(len(s1)):
+        if i==s1[j]:
+            l.append(j)
+            break
+for i in sorted(l)[::-1]:
+    print(s1[i],end="")
