@@ -1,0 +1,13 @@
+n,c=int(input()),0
+for i in range(n):
+    t1,t2=map(str,input().split())
+    t1h,t1m=map(str,t1.split(":"))
+    t2h,t2m=map(str,t2.split(":"))
+    c+=((int(t2h)*60)+int(t2m))-((int(t1h)*60)+int(t1m))
+h=(int(c/60))%24
+if h==1:
+    a="Hour"
+else:
+    a="Hours"
+print(h,a,c%60,"Minutes")
+    
