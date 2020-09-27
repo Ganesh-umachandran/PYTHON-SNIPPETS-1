@@ -1,0 +1,19 @@
+n=int(input())
+l,a=[],n
+for i in range(n):
+    l1=[]
+    for j in range(n):
+        l1.append(a)
+        a+=1
+    l.append(l1)
+for i in range(n):
+    if i%2!=0:
+        s,s1,s2=n-1,-1,-1
+    else:
+        s,s1,s2=0,n,1
+    for j in range(s,s1,s2):
+        print(l[j][i],end=" ")
+    print()
+        
+        
+        
