@@ -1,0 +1,14 @@
+r,c=map(int,input().split())
+l,a,b=[],0,0
+for i in range(r):
+    l.append(list(map(str,input().split())))
+print(l[a][b],end="")
+for i in range(r+c):
+    if a+1<r and l[a+1][b].isalpha():
+        print(l[a+1][b],end="")
+        a+=1
+    elif b+1<c and l[a][b+1].isdigit():
+        print(l[a][b+1],end="")
+        b+=1
+    else:
+        break
