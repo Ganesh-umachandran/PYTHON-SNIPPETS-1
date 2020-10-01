@@ -1,0 +1,15 @@
+s1=input().strip()
+s2=input().strip()
+r,r1,l,l1=[],[],[],[]
+for i in s1:
+    if i not in r:
+        l.append(s1.count(i))
+        r.append(i)
+for i in s2:
+    if i not in r1:
+        l1.append(s2.count(i))
+        r1.append(i)
+if sorted(l)==sorted(l1):
+    print("yes")
+else:
+    print("no")
