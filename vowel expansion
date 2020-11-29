@@ -1,0 +1,14 @@
+#Your code below
+for i in input().strip():
+    if i=="a" or i=="A":
+        print(i*2,end="")
+    elif i=="e" or i=="E":
+        print(i*3,end="")
+    elif i=="i" or i=="I":
+        print(i*4,end="")
+    elif i=="o" or i=="O":
+        print(i*5,end="")
+    elif i=="u" or i=="U":
+        print(i*6,end="")
+    else:
+        print(i,end="")
