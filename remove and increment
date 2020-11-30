@@ -1,0 +1,11 @@
+#Your code below
+n,x=map(int,input().split())
+l=list(map(int,input().split()))
+for i in range(x):
+    s=l[i]//(n-i-1)
+    r=l[i]%(n-i-1)
+    for j in range(i+1,n):
+        l[j]+=s
+    for j in range(i+1,i+r+1):
+        l[j]+=1
+print(*l[i+1:])
