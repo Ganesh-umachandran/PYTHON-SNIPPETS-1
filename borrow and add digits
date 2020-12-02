@@ -1,0 +1,9 @@
+#Your code below
+n,s=int(input()),0
+for i in list(map(str,input().split())):
+    if i[-1]=="0":
+        if int(i[-2])>0:
+            s+=int(i)-9
+    else:
+        s+=int(i)
+print(s)
