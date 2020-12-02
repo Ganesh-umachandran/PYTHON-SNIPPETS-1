@@ -1,0 +1,26 @@
+#Your code below
+r,c=map(int,input().split())
+l,a=[],1
+for i in range(r):
+    l.append(list(map(str,input().split())))
+s=input().strip()
+for i in range(r):
+    for j in range(c):
+        if l[i][j]==s[0]:
+            for x in range(i+1,r):
+                if a<len(s):
+                    l[x][j]=s[a]
+                    a+=1
+            for y in range(j+1,c):
+                for x in range(r):
+                    if a<len(s):
+                        l[x][y]=s[a]
+                        a+=1
+            for y in range(0,j+1):
+                for x in range(r):
+                    if a<len(s):
+                        l[x][y]=s[a]
+                        a+=1
+for i in l:
+    print(*i)
+            
