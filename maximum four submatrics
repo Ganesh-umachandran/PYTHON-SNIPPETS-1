@@ -1,0 +1,17 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+x,y=map(int,input().split())
+def maxi(x1,x2,y1,y2):
+    m=0
+    for i in range(x1,x2):
+        for j in range(y1,y2):
+            if l[i][j]>m:
+                m=l[i][j]
+    print(m,end=" ")
+maxi(0,x-1,0,y-1)
+maxi(0,x-1,y,c)
+maxi(x,r,0,y-1)
+maxi(x,r,y,c)
