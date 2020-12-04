@@ -1,0 +1,10 @@
+l=list(map(str,input().split()))
+m,a=0,0
+for i in range(len(l)):
+  c=0
+  for j in i:
+    if j.isalpha() and j not in "AEIOUaeiou":
+      c+=1
+  if c>=m:
+    m,a=c,i
+ print(*l[:a+1])
