@@ -1,0 +1,7 @@
+#Your code below
+n,l=bin(int(input()))[2:],[]
+for i in range(len(n)):
+    a=int(n[len(n)-i-1:],2)
+    if a not in l:
+        l.append(a)
+print(*l)
