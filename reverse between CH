@@ -1,0 +1,6 @@
+#Your code below
+s=input().strip()
+ch=input().strip()
+print(s[:s.index(ch)],end="")
+print(s[s.index(ch)+1:len(s)-(s[::-1].index(ch))][::-1],end="")
+print(s[len(s)-(s[::-1].index(ch))-1:])
