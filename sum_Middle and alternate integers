@@ -1,0 +1,6 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(n//2):
+    print(l[n//2]+l[i],l[n//2]+l[n-1-i],end=" ")
+    
