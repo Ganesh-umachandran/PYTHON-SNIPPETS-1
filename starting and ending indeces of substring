@@ -1,0 +1,14 @@
+#Your code below
+s=input().strip()
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(input().strip())
+for i in l:
+    if i in s:
+        for j in range(len(s)):
+            if s[j:j+len(i)]==i :
+                print(j,j+len(i)-1)
+                break
+    else:
+        print(-1)
