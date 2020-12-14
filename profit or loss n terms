@@ -1,0 +1,18 @@
+#Your code below
+n=int(input())
+cost_price=list(map(int,input().split()))
+sell_price=0
+for i in cost_price:
+    if i%5!=0:
+        if i%5<=2:
+            sell_price+=(i-(i%5))
+        else:
+            sell_price+=(i+(5-i%5))
+    else:
+        sell_price+=i
+if sell_price==sum(cost_price):
+    print("No Profit No Loss")
+elif sell_price>sum(cost_price):
+    print("Profit",sell_price-sum(cost_price))
+else:
+    print("Loss",sum(cost_price)-sell_price)
