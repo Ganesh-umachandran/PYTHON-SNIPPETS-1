@@ -1,0 +1,19 @@
+#Your code below
+a="abcdefghijklm"
+b="nopqrstuvwxyz"
+s=input().strip()
+for i in s:
+    if i.lower() in a:
+        c=b[a.index(i.lower())]
+        if i.isupper():
+            print(c.upper(),end="")
+        else:
+            print(c,end="")
+    if i.lower() in b:
+        c=a[b.index(i.lower())]
+        if i.isupper():
+            print(c.upper(),end="")
+        else:
+            print(c,end="")
+    if i==" ":
+        print(" ",end="")
