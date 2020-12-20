@@ -1,0 +1,18 @@
+n=int(input())
+l,n1,n2=[],0,1
+while n1<=n:
+    l.append(n1)
+    t=n1+n2
+    n1=n2
+    n2=t
+c=0
+for i in l[::-1]:
+    if i<=n:
+        n-=i
+        c+=1
+    if n==0:
+        break
+print(c)
+
+
+        
