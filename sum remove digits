@@ -1,0 +1,7 @@
+n=int(input())
+l=list(map(int,input().split()))
+m,s=len(str(min(l)))-1,0
+for i in l:
+    s+=int(str(i)[:-m])
+print(s)
+    
