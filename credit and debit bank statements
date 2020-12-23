@@ -1,0 +1,15 @@
+#Your code below
+a,n=map(int,input().split())
+l=[]
+for i in range(n):
+    l.append(list(map(int,input().split())))
+print("Opening Balance:",a,sep="")
+for i in range(n):
+    if i==0:
+        b=a
+    else:
+        b=l[i-1][1]
+    if b+l[i][0]==l[i][1]:
+        print("Credit:"+str(l[i][0])+" Balance:"+str(l[i][1]))
+    else:
+        print("Debit:"+str(l[i][0])+" Balance:"+str(l[i][1]))
