@@ -1,0 +1,12 @@
+r,c=map(int,input().split())
+l,m=[],[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(r):
+    m.append(list(map(int,input().split())))
+for i in range(r//2):
+    m[i],m[r-1-i]=m[r-1-i],m[i]
+for i in range(r):
+    for j in range(c):
+        print(l[i][j]*m[i][j],end=" ")
+    print()
