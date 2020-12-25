@@ -1,0 +1,13 @@
+s,l=input().strip(),[]
+a,m,c=s[0],0,0
+for i in range(1,len(s)-1):
+    a+=s[i]
+    if s[i]!=s[i+1] and s[i]==s[i-1]:
+        l.append(a)
+        a=""
+l.append(a+s[-1])
+for i in l:
+    if len(i)>m:
+        m=len(i)
+for i in l:
+    print(i+("*"*(m-len(i))))
