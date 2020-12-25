@@ -1,0 +1,21 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(r):
+    a=0
+    for j in l[i]:
+        if "0" in str(j) or "00" in str(j):
+            a+=1
+    if a==1:
+        for j in l[i]:
+            if "0" not in str(j) and "00" not in str(j):
+                print(j+1,end=" ")
+            else:
+                print(j,end=" ")
+        print()
+    else:
+        for j in l[i]:
+            print(j,end=" ")
+        print()
