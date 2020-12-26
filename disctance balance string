@@ -1,0 +1,11 @@
+#Your code below
+r="abcdefghijklmnopqrstuvwxyz"
+s,c=input().strip().lower(),0
+if len(s)%2!=0:
+    c=1
+a,b=0,0
+for i in s[:len(s)//2]:
+    a+=r.index(i)+1
+for i in s[(len(s)//2)+c:]:
+    b+=r.index(i)+1
+print("Yes" if a==b else "No")
