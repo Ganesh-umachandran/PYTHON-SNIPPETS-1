@@ -1,0 +1,14 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(int,input().split())))
+n=int(input())
+l1=list(map(int,input().split()))
+for i in range(n):
+    for j in range(r-l1[i],r):
+        for k in range(c):
+            if l[j][k]>0:
+                l[j][k]-=1
+for i in l:
+    print(*i)
