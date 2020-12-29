@@ -1,0 +1,9 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(0,n-5,6):
+    l[i],l[i+3]=l[i+3],l[i]
+    l[i+1],l[i+4]=l[i+4],l[i+1]
+    l[i+2],l[i+5]=+l[i+5],l[i+2]
+for i in range(0,n-1,2):
+    print(l[i]+l[i+1],end=" ")
