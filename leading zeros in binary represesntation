@@ -1,0 +1,9 @@
+#Your code below
+n=int(input())
+l=[bin(int(i))[2:] for i in input().split()]
+m=0
+for i in l:
+    if len(i)>m:
+        m=len(i)
+for i in l:
+    print("0"*(m-len(i))+i,end=" ")
