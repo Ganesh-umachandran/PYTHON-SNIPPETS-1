@@ -1,0 +1,12 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+a,c=int(input()),0
+for i in range(1,a+1):
+    for j in range(0,i):
+        print(l[c],end=" ")
+        c+=1
+        if c==n:
+            c=0
+    print()
+    
