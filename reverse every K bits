@@ -1,0 +1,9 @@
+#Your code below
+n,k=map(int,input().split())
+n,s=bin(n)[2::][::-1],""
+for i in range(0,len(n),k):
+    if i+k<len(n):
+        s+=n[i:i+k][::-1]
+    else:
+        s+=n[i:len(n)][::-1]
+print(int(s[::-1],2))
