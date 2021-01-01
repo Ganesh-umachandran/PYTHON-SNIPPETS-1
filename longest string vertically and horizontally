@@ -1,0 +1,28 @@
+#Your code below
+r,c=map(int,input().split())
+l,l1=[],[]
+for i in range(r):
+    l.append(list(map(str,input().split())))
+a,b=map(int,input().split())
+s=""
+for i in range(a):
+    s+=l[i][b-1]
+l1.append(s[::-1])
+s=""
+for i in range(b-1,c):
+    s+=l[a-1][i]
+l1.append(s)
+s=""
+for i in range(a-1,r):
+    s+=l[i][b-1]
+l1.append(s)
+s=""
+for i in range(b):
+    s+=l[a-1][i]
+l1.append(s[::-1])
+s=""
+m=l1[0]
+for i in range(1,4):
+    if len(l1[i])>len(m):
+        m=l1[i]
+print(m)
