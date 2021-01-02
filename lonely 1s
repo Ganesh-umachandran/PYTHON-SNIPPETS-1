@@ -1,0 +1,24 @@
+#Your code below
+r,c=map(int,input().split())
+l,a=[],0
+for i in range(r):
+    l.append(list(map(int,input().split())))
+for i in range(r):
+    for j in range(c):
+        if l[i][j]==1:
+            b=0
+            for k in range(r):
+                if l[k][j]==1 and k!=i:
+                    b=1
+                    break
+            if b==1:
+                break
+            for k in range(c):
+                if l[i][k]==1 and k!=j:
+                    b=1
+                    break
+            if b==1:
+                break
+            else:
+                a+=1
+print(a)
