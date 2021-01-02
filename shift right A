@@ -1,0 +1,12 @@
+#Your code below
+r,c=map(int,input().split())
+l=[]
+for i in range(r):
+    l.append(list(map(str,input().split())))
+for i in l:
+    a=i.count("A")
+    for i in range(c-a):
+        print("-",end=" ")
+    for i in range(a):
+        print("A",end=" ")
+    print()
