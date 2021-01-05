@@ -1,0 +1,19 @@
+#Your code below
+h,m,s=map(str,input().split(":"))
+l=[]
+h1=bin(int(h[0]))[2:]
+l.append(list("##"+("0"*(2-len(h1)))+h1))
+h2=bin(int(h[1]))[2:]
+l.append(list("0"*(4-len(h2))+h2))
+m1=bin(int(m[0]))[2:]
+l.append(list("#"+("0"*(3-len(m1)))+m1))
+m2=bin(int(m[1]))[2:]
+l.append(list("0"*(4-len(m2))+m2))
+s1=bin(int(s[0]))[2:]
+l.append(list("#"+("0"*(3-len(s1)))+s1))
+s2=bin(int(s[1]))[2:]
+l.append(list("0"*(4-len(s2))+s2))
+for i in range(4):
+    for j in range(6):
+        print(l[j][i],end=" ")
+    print()
