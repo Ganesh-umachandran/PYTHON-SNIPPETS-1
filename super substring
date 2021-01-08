@@ -1,0 +1,12 @@
+n=int(input())
+l,l1,flag=[],[],0
+for i in range(n):
+    l.append(input().strip())
+for i in range(n):
+    for j in range(n):
+        if l[i] in l[j] and l1.count(l[i])<l.count(l[i])  and i!=j:
+            print(l[i])
+            l1.append(l[i])
+            flag=1
+if flag==0:
+    print(-1)
