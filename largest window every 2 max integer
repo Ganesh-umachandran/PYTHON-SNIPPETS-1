@@ -1,0 +1,7 @@
+#Your code below
+n,k=map(int,input().split())
+l=list(map(int,input().split()))
+for i in range(n-k+1):
+    a=sorted(l[i:i+k])
+    print(a[-2],a[-1])
+    
