@@ -1,0 +1,11 @@
+#Your code below
+n,k=map(int,input().split())
+s=list("0"*k)
+l=list(map(int,input().split()))
+for i in l:
+    for j in range(i-1,k):
+        if s[j]=="0":
+            s[j]="1"
+        else:
+            s[j]="0"
+print(int("".join(s),2))
