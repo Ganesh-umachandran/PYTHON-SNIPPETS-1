@@ -1,0 +1,17 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+x,flag=[],0
+for i in range(n):
+    if i+1<n and l[i]==l[i+1]-1:
+        x.append(l[i])
+    elif l[i]==1:
+        x.append(1)
+        print(*x)
+        flag=1
+        x=[]
+    else:
+        x=[]
+ if flag==0:
+    print(-1)
+    
