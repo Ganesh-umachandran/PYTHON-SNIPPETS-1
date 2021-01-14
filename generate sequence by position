@@ -1,0 +1,14 @@
+#Your code below
+l=[1,2,2,3,3,4,4,4,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8]
+n=int(input())
+if n<len(l):
+    print(*l[:n])
+else:
+    i=9
+    while(len(l)<=n):
+        for j in range(l[i-1]):
+            l.append(i)
+        i+=1
+    print(*l[:n])
+        
+    
