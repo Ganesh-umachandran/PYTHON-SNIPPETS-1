@@ -1,0 +1,14 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+k=int(input())
+for i in range(k):
+    if min(l[0],l[1])==l[0]:
+        a=l[0]
+        l.pop(0)
+    else:
+        a=l[1]
+        l.pop(1)
+    l.append(a)
+print(*l)
+    
