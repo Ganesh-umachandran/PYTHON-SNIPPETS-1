@@ -1,0 +1,17 @@
+#Your code below
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(n):
+    f=0
+    for j in l:
+        if j>0:
+            print(j,end=" ")
+            f=1
+    l.pop(-1)
+    for j in range(len(l)):
+        l[j]-=1
+    if f==0:
+        break
+    print()
+        
+        
