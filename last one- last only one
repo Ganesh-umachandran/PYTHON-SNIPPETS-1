@@ -1,0 +1,6 @@
+#Your code below
+s=input().strip()[::-1]
+if s[0] in s[1:]:
+    print((s[0]+s[1:s[1:].index(s[0])+2])[::-1])
+else:
+    print(-1)
